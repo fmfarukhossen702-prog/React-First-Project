@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 570px;
+  --breakpoint-md: 770px;
+  --breakpoint-lg: 1020px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1500px;
+  --color-primary: #734BDF;
+  --font-Onest: "Onest", sans-serif;  
+  --animate-slide: slide 3s linear infinite;
+}
+
+@utility container{
+    @apply mx-auto
+}
+@keyframes slide {
+    0% {
+        transform: scale(0.97);
+        box-shadow: 0 0 0 0 #734BDF;
+    }
+
+    70% {
+        transform: scale(1.2);
+        box-shadow: 0 0 0 15px rgba(222, 84, 72, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(222, 84, 72, 0);
+    }
+}
+
+
