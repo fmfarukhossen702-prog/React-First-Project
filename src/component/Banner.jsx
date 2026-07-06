@@ -3,7 +3,7 @@ import Button from './Button';
 import CounDown from './CounDown';
 
 
-const Banar = () => {
+const Banner = () => {
   return (
     <div className=" bg-[url(./assets/Background.png)]  text-white bg-cover bg-center bg-no-repeat pt-70 pb-37.5  ">
       <h1 className=" text-center text-[76px] font-extrabold leading-20.75 tracking-[-1.52px] ">
@@ -28,12 +28,14 @@ const Banar = () => {
           </div>
         </div>
       </div>
-      <p className=' text-xl font-bold leading-5.5 text-center mt-15 mb-20 '>Upcoming Speaker Reveal - Don't Miss Out</p>
+      <p className=" text-xl font-bold leading-5.5 text-center mt-15 mb-20 ">
+        Upcoming Speaker Reveal - Don't Miss Out
+      </p>
       <div className=" flex justify-center ">
-        <CounDown/>
+        <CounDown />
       </div>
     </div>
   );
-}
+};
 
-export default Banar
+export default Banner;
