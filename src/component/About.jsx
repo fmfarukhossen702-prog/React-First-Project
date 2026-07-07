@@ -10,10 +10,19 @@ import Button from "./Button";
 
 const About = () => {
   const [active, setActive] = useState("vision");
+  const contentObj = {
+    mission :  'Our Mission is to build a global community where collaboration fuels innovation we aim encourage fresh thinking, spark inspiring dialogues, and create a space.' ,
+    vision : "Our vision is to build a global community where collaboration fuels innovation we aim encourage fresh thinking, spark inspiring dialogues, and create a space.",
+    goal : "Our goal is to build a global community where collaboration fuels innovation we aim encourage fresh thinking, spark inspiring dialogues, and create a space. "
+    
+  }
   let number = "+00 123 456 789";
   const handleCall = () =>{
-    navigator.clipboard.writeText(number)
-    alert(`Calling.... ${number}  \nNumber copy : ${number}`);
+      alert(`Calling.... ${number} `);
+      }
+  const handleCopy = () => {
+      navigator.clipboard.writeText(number);
+      alert(`Copy number :  ${number}`)
   }
 
   return (
@@ -55,9 +64,7 @@ const About = () => {
               </div>
             </div>
             <p className="text-[#737681] leading-[25.6px] pt-11 pb-13.5">
-              Our vision is to build a global community where collaboration
-              fuels innovation we aim encourage fresh thinking, spark inspiring
-              dialogues, and create a space.
+             {contentObj[active]}
             </p>
             <div className="flex justify-between pb-6 border-b border-b-[#8f8c8c52] ">
               <div className="flex items-center gap-3.75">
@@ -84,7 +91,7 @@ const About = () => {
                   >
                     Call Now!
                   </h5>
-                  <p className=" leading-5.2 text-[#737681] whitespace-nowrap ">
+                  <p onClick={handleCopy} className=" leading-5.2 text-[#737681] whitespace-nowrap ">
                     +00 123 456 789
                   </p>
                 </div>

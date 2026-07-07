@@ -4,6 +4,7 @@ import Banner from "../component/Banner";
 
 import LogoLoop from '../component/LogoLoop';
 import About from '../component/About';
+import Service from '../component/Service';
 
 
 
@@ -14,6 +15,7 @@ const Home = () => {
       <Banner />
       <LogoLoop/>
       <About/>
+      <Service/>
 
      
     </>
