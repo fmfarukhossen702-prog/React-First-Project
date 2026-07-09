@@ -5,6 +5,13 @@ import Banner from "../component/Banner";
 import LogoLoop from '../component/LogoLoop';
 import About from '../component/About';
 import Service from '../component/Service';
+import Expert from '../component/Expert';
+import EventShedule from '../component/EventShedule';
+import Price from '../component/Price';
+import VideoBg from '../component/VideoBg';
+import CustomerAbout from '../component/CustomerAbout';
+import Experience from '../component/Experience';
+import OurUpdate from '../component/OurUpdate';
 
 
 
@@ -16,6 +23,13 @@ const Home = () => {
       <LogoLoop/>
       <About/>
       <Service/>
+      <Expert/>
+      <EventShedule/>
+      <Price/>
+      <VideoBg/>
+      <CustomerAbout/>
+      <Experience/>
+      <OurUpdate/>
 
      
     </>
