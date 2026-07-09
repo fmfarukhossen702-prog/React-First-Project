@@ -2,7 +2,7 @@ import React from "react";
 import Container from "./Container";
 import SecHead from "./SecHead";
 import img1 from "../assets/priceLogo.png";
-import img2 from "../assets/priceLogo2.png";
+import img2 from "../assets/pricelogo2.png";
 import img3 from "../assets/priceLogo3.png";
 import img4 from "../assets/priceLogo4.png";
 import symbol from "../assets/Symbol.png";
