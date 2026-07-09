@@ -55,7 +55,7 @@ const Experience = () => {
           </div>
           {/* secend  */}
           <div className=" group duration-200 hover:bg-primary  p-10 w-133.25 h-105  rounded-[20px] bg-[#ffffff13] ">
-            <div className="flex duration-200 group-hover:bg-[#7c917ca7] gap-2 ">
+            <div className="flex duration-200  group-hover:bg-[#8ab25cd6] p-1 rounded-[5px] border-b-2 border-transparent group-hover:border-white  gap-2 ">
               <img src={star} alt="" />
               <img src={star} alt="" />
               <img src={star} alt="" />
@@ -79,13 +79,15 @@ const Experience = () => {
                   </p>
                 </div>
               </div>
-              <img src={icon} alt="" />
+              <div className="group-hover:bg-[#8ab25cd6] p-0.5 rounded-full group-hover:border group-hover:border-white ">
+                <img src={icon} alt="" />
+              </div>
             </div>
           </div>
 
           {/* three  */}
           <div className=" group duration-200 hover:bg-primary p-10 w-133.25 h-105 rounded-[20px] bg-[#ffffff13] ">
-            <div className=" duration-200 group-hover:bg-[#7c917ca7] flex gap-2 ">
+            <div className=" duration-200 group-hover:bg-[#8ab25cd6] p-1 rounded-[5px] border-b-2 border-transparent  group-hover:border-white  flex gap-2 ">
               <img src={star} alt="" />
               <img src={star} alt="" />
               <img src={star} alt="" />
@@ -109,7 +111,9 @@ const Experience = () => {
                   </p>
                 </div>
               </div>
-              <img src={icon} alt="" />
+              <div className="group-hover:bg-[#8ab25cd6] p-0.5 rounded-full group-hover:border group-hover:border-white ">
+                <img src={icon} alt="" />
+              </div>
             </div>
           </div>
         </div>

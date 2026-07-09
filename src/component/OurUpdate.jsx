@@ -89,7 +89,7 @@ const OurUpdate = () => {
                   <div className="py-12.5 pr-20">
                     <div className="flex items-center gap-2.5">
                       <div>
-                        <img src={photo3} alt="" />
+                        <img src={photo2} alt="" />
                       </div>
 
                       <h5 className=" text-[#737681] ">Esther Howard</h5>

@@ -8,6 +8,7 @@ import img4 from "../assets/icon4.png";
 import img5 from "../assets/icon5.png";
 import star from '../assets/star.png'
 
+
 const Service = () => {
   return (
     <div className="bg-[#161A2D] bg-[url(./assets/bg.png)] bg-cover bg-center bg-no-repeat  py-25">
