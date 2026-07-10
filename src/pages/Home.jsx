@@ -12,6 +12,7 @@ import VideoBg from '../component/VideoBg';
 import CustomerAbout from '../component/CustomerAbout';
 import Experience from '../component/Experience';
 import OurUpdate from '../component/OurUpdate';
+import CustomerAbout2 from '../component/CustomerAbout2';
 
 
 
@@ -27,9 +28,11 @@ const Home = () => {
       <EventShedule/>
       <Price/>
       <VideoBg/>
+      {/* <CustomerAbout2/> */}
       <CustomerAbout/>
       <Experience/>
       <OurUpdate/>
+      
 
      
     </>
