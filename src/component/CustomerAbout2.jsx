@@ -5,12 +5,6 @@ import img1 from "../assets/Customer.png";
 import img2 from "../assets/plus.png";
 import img3 from "../assets/pluss.png";
 
-import React, { useState } from "react";
-import Container from "./Container";
-import SecHead from "./SecHead";
-import img1 from "../assets/Customer.png";
-import img2 from "../assets/plus.png";
-import img3 from "../assets/pluss.png";
 
 const CustomerAbout2 = () => {
   const [active, setActive] = useState(null);

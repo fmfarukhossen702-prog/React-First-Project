@@ -5,100 +5,77 @@ import img1 from "../assets/Customer.png";
 import img2 from "../assets/plus.png";
 import img3 from "../assets/pluss.png";
 
-const CustomerAbout = () => {
+const CustomerAbout2 = () => {
   const [active, setActive] = useState(null);
 
+  const dataObj = [
+    {
+      id: "1",
+      question:
+        "1. How does the complete event register process actually work?",
+      answere:
+        " One : Our event is designed with flexible scheduling, allowing you to move between halls, select sessions that interest you most, and customize your learning experience throughout the day.",
+    },
+    {
+      id: "2",
+      question: "2. Where is the main event venue located precisely?",
+      answere:
+        "Two : Our event is designed with flexible scheduling, allowing you to move between halls, select sessions that interest you most, and customize your learning experience throughout the day.",
+    },
+    {
+      id: "3",
+      question: "3. Can attendees freely switch between sessions and tracks?",
+      answere:
+        "Three : Our event is designed with flexible scheduling, allowing you to move between halls, select sessions that interest you most, and customize your learning experience throughout the day.",
+    },
+    {
+      id: "4",
+      question:
+        "4. Does the event provide virtual participation options online?",
+      answere:
+        "Four : Our event is designed with flexible scheduling, allowing you to move between halls, select sessions that interest you most, and customize your learning experience throughout the day.",
+    },
+    {
+      id: "5",
+      question: "5. What is the event refund and cancellation policy?",
+      answere:
+        "Five :Our event is designed with flexible scheduling, allowing you to move between halls, select sessions that interest you most, and customize your learning experience throughout the day.",
+    },
+  ];
+
   return (
-    <div className="py-25">
+    <div className="my-25">
       <Container>
-        <div className="flex items-center  ">
-          <div className=" h-full w-full ">
-            <img src={img1} alt="" />
+        <div className="grid grid-cols-12 gap-11">
+          <div className=" col-span-5 ">
+            <img className=" w-full " src={img1} alt="" />
           </div>
-          <div className=" py-11.25  ">
+          <div className=" col-span-7  ">
             <SecHead
               title="FAQ's "
               heading="What our customers say about their experience"
-              className="1.5 mb-8.75"
+              className=" mb-11 "
             />
-            <div className="flex flex-col w-198  gap-7.5 justify-center">
-              <div className="flex flex-col w-198 gap-7.5 justify-center">
-                {/*FAQ 1 */}
-                <div className="bg-[#F6F6F7] w-full rounded-[20px]">
-                  <div
-                    onClick={() => setActive(active === 0 ? null : 0)}
-                    className="flex justify-between py-5.75 px-6.25"
-                  >
-                    <p className="text-lg font-semibold text-black">
-                      1. How does the complete event register process actually
-                      work?
-                    </p>
-
-                    <img
-                      className="cursor-pointer"
-                      src={active === 0 ? img3 : img2}
-                      alt=""
-                    />
+            {/* content  */}
+            <div className="w-full flex flex-col justify-center gap-7.5 ">
+              {dataObj.map((data) => (
+                <div
+                  onClick={() => setActive(active === data.id ? null : data.id)}
+                  className=" rounded-[20px] cursor-pointer  bg-[#F6F6F7] py-5.75 px-6.25"
+                >
+                  <div className="flex justify-between ">
+                    <p className={`font-semibold text-lg `}>{data.question}</p>
+                    <div>
+                      <img src={active === data.id ? img3 : img2} />
+                    </div>
                   </div>
-
-                  {active === 0 && (
-                    <p className="pl-6.25 py-7 pr-8 leading-6.25 border-t border-[#37353925]">
-                      One Our event is designed with flexible scheduling,
-                      allowing you to move between halls, select sessions that
-                      interest you most, and customize your learning experience
-                      throughout the day.
+                  {active === data.id && (
+                    <p className=" text-[#737681] mt-11 leading-6.25 ">
+                      {data.answere}
                     </p>
                   )}
                 </div>
-
-                {/* FAQ 2 */}
-                <div className="bg-[#F6F6F7] w-full rounded-[20px]">
-                  <div
-                    onClick={() => setActive(active === 1 ? null : 1)}
-                    className="flex justify-between py-5.75 px-6.25"
-                  >
-                    <p className="text-lg font-semibold text-black">
-                      2. How do I register for the event?
-                    </p>
-
-                    <img
-                      className="cursor-pointer"
-                      src={active === 1 ? img3 : img2}
-                      alt=""
-                    />
-                  </div>
-
-                  {active === 1 && (
-                    <p className="pl-6.25 py-7 pr-8 leading-6.25 border-t border-[#37353925]">
-                      You can register online by filling out the registration
-                      form and completing the payment process.
-                    </p>
-                  )}
-                </div>
-
-                {/* FAQ 3 */}
-                <div className="bg-[#F6F6F7] w-full rounded-[20px]">
-                  <div className="flex justify-between py-5.75 px-6.25">
-                    <p className="text-lg font-semibold text-black">
-                      3. Will I receive a certificate after attending?
-                    </p>
-
-                    <img
-                      className="cursor-pointer"
-                      onClick={() => setActive(active === 2 ? null : 2)}
-                      src={active === 2 ? img3 : img2}
-                      alt=""
-                    />
-                  </div>
-
-                  {active === 2 && (
-                    <p className="pl-6.25 py-7 pr-8 leading-6.25 border-t border-[#37353925]">
-                      Yes, every participant who attends the event will receive
-                      a certificate after the event is completed.
-                    </p>
-                  )}
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -107,4 +84,4 @@ const CustomerAbout = () => {
   );
 };
 
-export default CustomerAbout;
+export default CustomerAbout2;
