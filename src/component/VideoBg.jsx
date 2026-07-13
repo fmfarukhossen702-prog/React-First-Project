@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Container from "./Container";
-import video from "../assets/video3.mp4";
+import video from "../assets/video2.mp4";
 
 const VideoBg = () => {
   const [play, setPlay] = useState(false);

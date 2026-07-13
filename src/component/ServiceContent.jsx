@@ -1,11 +1,12 @@
 import React from "react";
 import img5 from "../assets/icon5.png";
 
-const ServiceContent = ({ image, heading }) => {
+const ServiceContent = ({ image, heading, children }) => {
   return (
     <div className="group duration-200 hover:bg-primary w-85 col-span-1 p-10 rounded-[20px] bg-[#ffffff10] ">
-      <div className="group-hover:bg-[#ffffff10]  duration-200  w-12.5 h-12.5 flex justify-center items-center mb-25 bg-primary rounded-[10px] ">
+      <div className="group-hover:bg-white group-hover:text-black duration-200  w-12.5 h-12.5 flex justify-center items-center mb-25 bg-primary rounded-[10px] ">
        <img src={image} alt="" />
+       {children}
       </div>
       <h3 className=" font-bold text-xl leading-5.5 "> {heading} </h3>
       <p className="leading-[25.6px] pb-8 pt-3 border-b border-b-[#ffffff5b] ">

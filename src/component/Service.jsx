@@ -1,18 +1,12 @@
 import React from "react";
 import Container from "./Container";
 import SecHead from "./SecHead";
-import img1 from "../assets/icon1.png";
-import img2 from "../assets/icon2.png";
 import img3 from "../assets/icon3.png";
 import img4 from "../assets/icon4.png";
-import img5 from "../assets/icon5.png";
-import star from '../assets/star.png'
+import star from "../assets/star.png";
 import ServiceContent from "./ServiceContent";
 
-
-
 const Service = () => {
-  
   return (
     <div className="bg-[#161A2D] bg-[url(./assets/bg.png)] bg-cover bg-center bg-no-repeat  py-25">
       <Container>
@@ -26,8 +20,12 @@ const Service = () => {
 
         {/* content  */}
         <div className="grid grid-cols-4 gap-7.5 text-white">
-          <ServiceContent image={img1} heading="Event Planning Manage" />
-          <ServiceContent image={img2} heading="Conference Coordination" />
+          <ServiceContent heading="Event Planning">
+            <i className="fa-regular fa-copy text-2xl "></i>
+          </ServiceContent>
+          <ServiceContent heading="Conference Coordination">
+            <i className="fa-regular fa-bell text-2xl "></i>
+            </ServiceContent>
           <ServiceContent image={img3} heading="Venue Booking & Setup" />
           <ServiceContent image={img4} heading="Post-Event Analytics" />
         </div>

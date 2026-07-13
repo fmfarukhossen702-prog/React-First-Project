@@ -13,7 +13,6 @@ const CounDown = () => {
             }, 1000);
     },[])
     const {days,hours,minutes,seconds} = count
-console.log(count)
   return (
     <div className="flex gap-7.5">
       <div className="  backdrop-blur-lg bg-[#ffffff0d] w-31.25 h-30 flex gap-1 flex-col rounded-[20px] justify-center items-center">

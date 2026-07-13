@@ -5,15 +5,55 @@ import img1 from "../assets/exper1.png";
 import img2 from "../assets/exper2.png";
 import img3 from "../assets/exper3.png";
 import img4 from "../assets/exper4.png";
-import star from '../assets/star.png'
 import Button from "./Button";
-import icon from '../assets/icon.png'
-import vactor1 from '../assets/Vector1.png'
-import vactor2 from '../assets/Vector2.png'
-import vactor3 from '../assets/Vector3.png'
+import vactor1 from "../assets/Vector1.png";
+import vactor2 from "../assets/Vector2.png";
+import vactor3 from "../assets/Vector3.png";
+import ExperienceContent from "./ExperienceContent";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
+const SliderComponent = Slider?.default ?? Slider;
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "none", background: "red" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "none", background: "green" }}
+      onClick={onClick}
+    />
+  );
+}
 
 const Experience = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    appendDots: (dots) => (
+      <div className="">
+        <ul style={{ margin: "0px" }}> {dots} </ul>
+      </div>
+    ),
+    customPaging: () => <div className="w-3.5 h-3.5 mt-10 rounded-full bg-[#ffffff10] " ></div>,
+  };
+
   return (
     <div className=" bg-[#161A2D] bg-[url(./assets/bg.png)] bg-cover bg-center bg-no-repeat  py-25 ">
       <Container>
@@ -25,9 +65,9 @@ const Experience = () => {
           bgCss=" bg-white "
         />
 
-        <div className="flex gap-4 text-white ">
+        <div className="flex  gap-4 text-white ">
           {/* first  */}
-          <div className=" group duration-200  hover:bg-primary  p-10 w-86.5 h-105 rounded-[20px] bg-[#ffffff13] ">
+          <div className=" group duration-200  hover:bg-primary shrink-0  p-10 w-86.5 h-105 rounded-[20px] bg-[#ffffff13] ">
             <div className=" relative w-full h-10.5 rounded-full ">
               <div className=" absolute  ">
                 <img className="w-full h-full" src={img1} alt="" />
@@ -53,69 +93,49 @@ const Experience = () => {
               View All Reviews
             </Button>
           </div>
-          {/* secend  */}
-          <div className=" group duration-200 hover:bg-primary  p-10 w-133.25 h-105  rounded-[20px] bg-[#ffffff13] ">
-            <div className="flex duration-200  group-hover:bg-[#8ab25cd6] p-1 rounded-[5px] border-b-2 border-transparent group-hover:border-white  gap-2 ">
-              <img src={star} alt="" />
-              <img src={star} alt="" />
-              <img src={star} alt="" />
-              <img src={star} alt="" />
-              <img src={star} alt="" />
-            </div>
-            <p className=" pt-6 pb-17.5 border-b border-[#cfbbbb26] text-lg font-semibold leading-7 ">
-              "Truly outstanding service! The team exceeded our expectations
-              with their professionalism, creativity, and quick turnaround time.
-              Highly recommended for anyone seeking quality and reliability."
-            </p>
-            <div className="flex justify-between items-center mt-10 ">
-              <div className="flex gap-3 items-center">
-                <img src={img2} alt="" />
-                <div>
-                  <h5 className=" font-bold text-xl leading-5.5 ">
-                    Ralph Edwards
-                  </h5>
-                  <p className=" whitespace-nowrap ">
-                    Global Marketing Director
-                  </p>
-                </div>
-              </div>
-              <div className="group-hover:bg-[#8ab25cd6] p-0.5 rounded-full group-hover:border group-hover:border-white ">
-                <img src={icon} alt="" />
-              </div>
-            </div>
-          </div>
 
-          {/* three  */}
-          <div className=" group duration-200 hover:bg-primary p-10 w-133.25 h-105 rounded-[20px] bg-[#ffffff13] ">
-            <div className=" duration-200 group-hover:bg-[#8ab25cd6] p-1 rounded-[5px] border-b-2 border-transparent  group-hover:border-white  flex gap-2 ">
-              <img src={star} alt="" />
-              <img src={star} alt="" />
-              <img src={star} alt="" />
-              <img src={star} alt="" />
-              <img src={star} alt="" />
-            </div>
-            <p className=" pt-6 pb-17.5 border-b border-[#cfbbbb26] text-lg font-semibold leading-7 ">
-              "Truly outstanding service! The team exceeded our expectations
+          <SliderComponent className="w-274  " {...settings}>
+            <div>
+              <ExperienceContent
+                image={img2}
+                name="Ralph Edwards"
+                profession="Global Marketing Director"
+                content="Truly outstanding service! The team exceeded our expectations
               with their professionalism, creativity, and quick turnaround time.
               Highly recommended for anyone seeking quality and reliability."
-            </p>
-            <div className="flex justify-between items-center mt-10 ">
-              <div className="flex gap-3 items-center">
-                <img src={img3} alt="" />
-                <div>
-                  <h5 className=" font-bold text-xl leading-5.5 ">
-                    Kristin Watson
-                  </h5>
-                  <p className=" whitespace-nowrap ">
-                    Global Marketing Director
-                  </p>
-                </div>
-              </div>
-              <div className="group-hover:bg-[#8ab25cd6] p-0.5 rounded-full group-hover:border group-hover:border-white ">
-                <img src={icon} alt="" />
-              </div>
+              />
             </div>
-          </div>
+            <div>
+              <ExperienceContent
+                image={img3}
+                name="Kristin Watson"
+                profession="Global Marketing Director"
+                content="Truly outstanding service! The team exceeded our expectations
+              with their professionalism, creativity, and quick turnaround time.
+              Highly recommended for anyone seeking quality and reliability."
+              />
+            </div>
+            <div>
+              <ExperienceContent
+                image={img2}
+                name="Ralph Edwards"
+                profession="Global Marketing Director"
+                content="Truly outstanding service! The team exceeded our expectations
+              with their professionalism, creativity, and quick turnaround time.
+              Highly recommended for anyone seeking quality and reliability."
+              />
+            </div>
+            <div>
+              <ExperienceContent
+                image={img3}
+                name="Kristin Watson"
+                profession="Global Marketing Director"
+                content="Truly outstanding service! The team exceeded our expectations
+              with their professionalism, creativity, and quick turnaround time.
+              Highly recommended for anyone seeking quality and reliability."
+              />
+            </div>
+          </SliderComponent>
         </div>
 
         <div className=" mt-25 flex justify-between items-center ">
